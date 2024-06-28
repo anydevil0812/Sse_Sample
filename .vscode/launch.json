@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PandoApplication<pando>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "co.kr.pando.pando.PandoApplication",
+            "projectName": "pando",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
