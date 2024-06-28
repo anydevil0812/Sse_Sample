@@ -42,12 +42,6 @@
       </div>
     </div>
   
-    <div>
-      <label for="num">Num:</label>
-      <input type="number" id="num" v-model="newData" />
-      <button @click="addData">Add</button>
-    </div>
-  
     <!-- 그래프를 보여줄 canvas 엘리먼트 추가 -->
     <div>
       <canvas ref="chartCanvas" id="myChart"></canvas>
@@ -73,7 +67,6 @@
         startTime: null,
         stopTime: null,
         count: 0,
-        newData: 0,
       };
     },
     methods: {
@@ -94,7 +87,6 @@
             if (!isNaN(number)) {
               this.mainBoardList.push(event.data);
               receivedCount++;
-              console.log(number);
               this.updateChart(number);
             }
           }
@@ -119,15 +111,7 @@
           this.stopTime = new Date().toLocaleTimeString();
         }
       },
-      addData() {
-        // 새로운 데이터를 그래프에 추가하는 메서드
-        const a = document.getElementById("num");
-        const numValue = a.value;
-        array2.push(numValue);
-        console.log(array2);
-        // 차트 데이터 업데이트
-        this.updateChart();
-      },
+
       openModal() {
         this.showModal = true;
       },
@@ -153,13 +137,11 @@
           array2[99] = number;
           chart.update();
           console.log("Array : " + array2);
-          console.log("Length : " + array2[4]);
         }
       },
     },
     mounted() {
       console.log("Mounted");
-      console.log(chartCanvas);
       console.log(chartCanvas.value);
       var arr3 = [];
       for (var i = 0; i < 100; i++) {
