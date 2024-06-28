@@ -59,7 +59,7 @@
   import { ref } from "vue";
   
   Chart.register(...registerables);
-  // const chartContainer = ref(null);
+  
   const chartCanvas = ref(null);
   const array2 = [10, 30, 20, 30, 15];
   

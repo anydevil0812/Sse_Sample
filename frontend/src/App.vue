@@ -1,18 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <Socket_IO msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Socket_IO from './components/Socket_IO.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Socket_IO
   }
 }
 </script>

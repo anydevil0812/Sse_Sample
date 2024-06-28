@@ -43,7 +43,7 @@ public class SseService {
             System.out.println("------------------3");
 
             try {
-                int num = random.nextInt(100);
+                int num = random.nextInt(10);
                 System.out.println("------------------3-1 : " + num);
                 String data = " Hello, World!" + num;
                 int size = data.getBytes().length;
